@@ -7,7 +7,7 @@ import utilStyles from "../../styles/utils.module.css";
 
 import headerStyles from "./styles.module.scss";
 
-export default function HeaderPost() {
+const HeaderPost: React.FC = () => {
   return (
     <>
       <div className={headerStyles.container}>
@@ -32,3 +32,5 @@ export default function HeaderPost() {
     </>
   );
 }
+
+export default HeaderPost;

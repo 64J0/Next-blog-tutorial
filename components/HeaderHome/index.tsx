@@ -6,7 +6,7 @@ import utilStyles from "../../styles/utils.module.css";
 
 import headerStyles from "./styles.module.scss";
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
     <div className={headerStyles.backgroundHeader}>
       <Link href="/contato">
@@ -21,3 +21,5 @@ export default function Header() {
     </div >
   );
 }
+
+export default Header;

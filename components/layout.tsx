@@ -6,14 +6,16 @@ import HeaderPost from "./HeaderPost";
 
 export const siteTitle = "64j0 Blog";
 
-export default function Layout({ children, home }) {
+interface LayoutProps {
+  home?: any;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, home }) => {
   return (
     <>
       <div className={styles.container}>
         <header className={styles.header}>
-          {
-            home ? (<HeaderHome />) : (<HeaderPost />)
-          }
+          {home ? (<HeaderHome />) : (<HeaderPost />)}
         </header>
 
         <main className={styles.mainContainer}>
@@ -30,3 +32,5 @@ export default function Layout({ children, home }) {
     </>
   );
 }
+
+export default Layout;
