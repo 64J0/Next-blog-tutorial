@@ -52,8 +52,8 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+export async function getPostData(filename: string) {
+  const fullPath = path.join(postsDirectory, `${filename}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Use gray-matter to parse the post metadata section
@@ -67,7 +67,7 @@ export async function getPostData(id: string) {
 
   // Combine the data with the id
   return {
-    id,
+    id: filename,
     contentHtml,
     ...matterResult.data,
   };

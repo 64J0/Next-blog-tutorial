@@ -71,7 +71,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   // Fetch necessary data for the blog post using params.id
   const { params } = context;
-  const postData = await getPostData(params?.id);
+  const postData = await getPostData(params?.id as string);
   return {
     props: {
       postData,
