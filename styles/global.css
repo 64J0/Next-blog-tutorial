@@ -1,105 +1,90 @@
-:root, [data-color-mode=light] {
-    --color-calendar-graph-day-bg: #ebedf0;
-    --color-calendar-graph-day-border: rgba(27,31,35,0.06);
-    --color-calendar-graph-day-L1-bg: #9be9a8;
-    --color-calendar-graph-day-L2-bg: #40c463;
-    --color-calendar-graph-day-L3-bg: #30a14e;
-    --color-calendar-graph-day-L4-bg: #216e39;
-    --color-calendar-graph-day-L4-border: rgba(27,31,35,0.06);
-    --color-calendar-graph-day-L3-border: rgba(27,31,35,0.06);
-    --color-calendar-graph-day-L2-border: rgba(27,31,35,0.06);
-    --color-calendar-graph-day-L1-border: rgba(27,31,35,0.06);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: monospace;
-    line-height: 1.6;
-    font-size: 14px;
-
-    background-color: #e5e5e5;
-}
-
-* {
-    box-sizing: border-box;
+  font-family: monospace;
+  line-height: 1.6;
+  font-size: 14px;
+  background-color: var(--black);
 }
 
 a {
-    color: #0070f3;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 main {
-    margin-top: 0;
-    padding-top: 1rem;
+  margin-top: 0;
+  padding-top: 1rem;
 }
 
 table,
 th,
 td {
-    border: 1px solid #333;
+  border: 1px solid #333;
 }
 
 table {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 th {
-    background-color: #efefef;
-    text-align: center;
+  background-color: #efefef;
+  text-align: center;
 }
 
 td {
-    padding-right: 0.3rem;
+  padding-right: 0.3rem;
 }
 
 td + td {
-    text-align: center;
+  text-align: center;
 }
 
 u {
-    text-decoration-color: #8257e5;
-    text-decoration-style: wavy;
+  text-decoration-color: #8257e5;
+  text-decoration-style: wavy;
 }
 
 pre {
-    background-color: rgb(246, 248, 250);
-    border-radius: 6px;
-    margin: 0.5rem 0;
-    padding: 0;
-    font-family: monospace;
-    font-size: 1rem;
+  background-color: rgb(246, 248, 250);
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 1rem;
 
-    overflow: auto;
-    text-overflow: ellipsis;
+  overflow: auto;
+  text-overflow: ellipsis;
 }
 
 code {
-    white-space: pre;
-    word-break: normal;
-    word-wrap: normal;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
 }
 
 p {
-    tab-size: 2rem;
-    -moz-tab-size: 2rem; /* Firefox */
+  tab-size: 2rem;
+  -moz-tab-size: 2rem; /* Firefox */
 }
 
 @media (max-width: 375px) {
-    p,
-    div,
-    li {
-        font-size: 1.3rem;
-    }
+  p,
+  div,
+  li {
+    font-size: 1.3rem;
+  }
 }

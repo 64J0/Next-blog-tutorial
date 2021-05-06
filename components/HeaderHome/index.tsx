@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import styles from "../layout.module.css";
+import styles from "../Layout/styles.module.scss";
 import utilStyles from "../../styles/utils.module.css";
 
 import headerStyles from "./styles.module.scss";
@@ -17,7 +17,9 @@ const Header: React.FC = () => {
           alt="Vinícius Gajo"
         />
       </Link>
-      <h1 className={utilStyles.heading2X}>Vinícius Gajo</h1>
+      <h1 className={`${utilStyles.heading2X} drac-text-purple-cyan`}>
+        Vinícius Gajo
+      </h1>
     </div >
   );
 }

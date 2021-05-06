@@ -2,9 +2,9 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/Layout";
 import { getSortedPostData } from "../lib/posts";
-import Date from "../components/date";
+import Date from "../components/Date";
 
 import utilStyles from "../styles/utils.module.css";
 
@@ -35,18 +35,22 @@ const Home: React.FC<{ allPostsData: AllPostsData[]; }> = ({ allPostsData }) => 
 
       <div className={utilStyles.mainContent}>
         <section className={utilStyles.headingMd}>
-          <p className={utilStyles.adjustText}>
+          <p className={`${utilStyles.adjustText} drac-text-white`}>
             Formado em engenharia mecatrônica no CEFET-MG, desenvolvedor WEB focado na stack JS (React, Vue, Next.js e Node.js, principalmente) atualmente trabalhando na <a href="https://jmvtechnology.com/">JMV Technology</a>.
           </p>
         </section>
         <section className={utilStyles.headingMd}>
-          <h2 className={utilStyles.headingLg}>Posts</h2>
-          <ul className={utilStyles.list}>
+          <h2 className={`${utilStyles.headingLg} drac-text-yellow`}>
+            Posts
+          </h2>
+          <ul className={`${utilStyles.list} drac-text-white`}>
             {
               allPostsData.map(({ id, date, title }: AllPostsData) => (
                 <li className={utilStyles.listItem} key={id}>
                   <Link href="/posts/[id]" as={`/posts/${id}`}>
-                    <a>{title}</a>
+                    <a className="drac-text-purple-cyan">
+                      {title}
+                    </a>
                   </Link>
                   <br />
                   <small className={utilStyles.lightText}>
