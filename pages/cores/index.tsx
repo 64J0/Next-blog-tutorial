@@ -2,7 +2,7 @@ import Head from "next/head";
 import React, { useState, useCallback } from "react";
 import { MdAddCircle } from "react-icons/md";
 
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import ColorSection from "./ColorSection";
 
 import styles from "./styles.module.scss";

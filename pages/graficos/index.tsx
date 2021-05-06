@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from "react";
 import Head from "next/head";
 import Chartjs, { ChartConfiguration } from "chart.js";
 
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import styles from "./styles.module.scss";
 
 const GraficosPage: React.FC = () => {
