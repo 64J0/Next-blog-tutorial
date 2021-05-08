@@ -87,11 +87,14 @@ const GraficosPage: React.FC = () => {
         <title>Gráficos</title>
       </Head>
 
-      <div className={styles.container}>
+      <div className={styles.graphic}>
         <h1>Gere um Gráfico</h1>
 
-        <form onSubmit={(e) => e.preventDefault()}>
-          <div>
+        <form
+          className={styles['graphic__form']}
+          onSubmit={(e) => e.preventDefault()}
+        >
+          <div className={styles['graphic__form-section']}>
             <label htmlFor="graph-title">Título do gráfico:</label>
             <input
               id="graph-title"
@@ -101,7 +104,7 @@ const GraficosPage: React.FC = () => {
             />
           </div>
 
-          <div>
+          <div className={styles['graphic__form-section']}>
             <label htmlFor="vertical-name">Título vertical:</label>
             <input
               id="vertical-name"
@@ -111,7 +114,7 @@ const GraficosPage: React.FC = () => {
             />
           </div>
 
-          <div>
+          <div className={styles['graphic__form-section']}>
             <label htmlFor="vertical-data">Dados de y:</label>
             <textarea
               id="vertical-data"
@@ -119,9 +122,11 @@ const GraficosPage: React.FC = () => {
               onChange={(e) => setVerticalData(e.target.value)}
             />
           </div>
-          <span>Exemplo: 0.2, 1.3, 3, 4.123124</span>
+          <span className={styles['graphic__tips']}>
+            Exemplo: 0.2, 1.3, 3, 4.123124
+          </span>
 
-          <div>
+          <div className={styles['graphic__form-section']}>
             <label htmlFor="horizontal-name">Título horizontal:</label>
             <input
               id="horizontal-name"
@@ -131,7 +136,7 @@ const GraficosPage: React.FC = () => {
             />
           </div>
 
-          <div>
+          <div className={styles['graphic__form-section']}>
             <label htmlFor="horizontal-data">Dados de x:</label>
             <textarea
               id="horizontal-data"
@@ -139,12 +144,17 @@ const GraficosPage: React.FC = () => {
               onChange={(e) => setHorizontalData(e.target.value)}
             />
           </div>
-          <span>Exemplo: 0, 1, 3, 4</span>
+          <span className={styles['graphic__tips']}>
+            Exemplo: 0, 1, 3, 4
+          </span>
 
           <button
-            onClick={handleGraph}
+            className={styles['graphic__button']}
             type="button"
-          >Gerar!</button>
+            onClick={handleGraph}
+          >
+            Gerar!
+          </button>
         </form>
 
         <canvas ref={canvasRef}></canvas>
