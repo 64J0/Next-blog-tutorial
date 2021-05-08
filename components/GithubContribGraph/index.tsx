@@ -1,4 +1,4 @@
-import React, { SVGProps, useCallback, useEffect, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 
 interface ContribChartHTML {
   contribChartHTML: string;
