@@ -1,28 +1,31 @@
-.container {
+.color-section__button {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
+  
   margin: 0;
   padding: 0;
   height: 6rem;
   width: 100%;
   cursor: pointer;
 
-  p {
-    font-family: monospace;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 0 1rem;
-    flex: 1;
-  }
+  border: none;
+  background-color: transparent;
+}
 
-  input[type="color"] {
-    margin: 0;
-    padding: 0;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-  }
+.color-section__text {
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.color-section__picker {
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }

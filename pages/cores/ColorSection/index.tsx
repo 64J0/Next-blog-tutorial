@@ -22,14 +22,17 @@ const ColorSection: React.FC = () => {
   }, [liElement.current, pickedColor, pElement.current]);
 
   return (
-    <li ref={liElement}>
+    <li ref={liElement} className={styles['color-section']}>
       <button
         type="button"
-        className={styles.container}
+        className={styles['color-section__button']}
         onClick={handleBtnClick}
       >
-        <p ref={pElement}>{pickedColor}</p>
+        <p ref={pElement} className={styles['color-section__text']}>
+          {pickedColor}
+        </p>
         <input
+          className={styles['color-section__picker']}
           type="color"
           name="colorPicker"
           onChange={(e) => setPickedColor(e.target.value)}

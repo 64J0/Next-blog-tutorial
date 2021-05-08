@@ -21,18 +21,19 @@ const Cores: React.FC = () => {
         <title>Paleta de cores</title>
       </Head>
 
-      <div className={styles.container}>
+      <div className={styles['color']}>
         <h1>Paleta de cores</h1>
 
-        <ul>
-          {
-            childArray.map((element) => {
-              return (<ColorSection key={element} />);
-            })
-          }
+        <ul className={styles['color__list']}>
+          {childArray.map((element) => {
+            return (
+              <ColorSection key={element} />
+            );
+          })}
         </ul>
 
         <button
+          className={styles['color__button']}
           type="button"
           onClick={handleAddNewElement}
         >
