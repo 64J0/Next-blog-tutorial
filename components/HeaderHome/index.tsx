@@ -1,23 +1,19 @@
 import React from "react";
 import Link from "next/link";
 
-import styles from "../Layout/styles.module.scss";
-import utilStyles from "../../styles/utils.module.css";
-
 import headerStyles from "./styles.module.scss";
 
 const Header: React.FC = () => {
   return (
-    <div className={headerStyles.backgroundHeader}>
+    <div className={headerStyles['header-home']}>
       <Link href="/contato">
         <img
           src="/images/profile.jpg"
-          className={`${styles.headerHomeImage} ${utilStyles.borderCircle}
-              ${utilStyles.shadow}`}
+          className={headerStyles['header-home__image']}
           alt="Vinícius Gajo"
         />
       </Link>
-      <h1>
+      <h1 className={headerStyles['header-home__title']}>
         Vinícius Gajo's Blog
       </h1>
     </div >
