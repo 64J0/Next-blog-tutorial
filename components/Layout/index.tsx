@@ -1,8 +1,10 @@
-import React from "react";
-import styles from "./styles.module.scss";
+import React, { useCallback } from "react";
+import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import HeaderHome from "../HeaderHome";
 import HeaderPost from "../HeaderPost";
+
+import styles from "./styles.module.scss";
 
 export const siteTitle = "64j0 Blog";
 
@@ -22,12 +24,20 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
           {children}
         </main>
 
-        <footer className={`${styles.footer} drac-text-white`}>
+        <footer className={styles.footer}>
           <span>
             &copy; Vinícius Gajo Marques Oliveira. All rights reserved.
           </span>
-          <span>
-            twitter-logo; github-logo; linkedin-logo;
+          <span className={styles['icon-container']}>
+            <a href="https://twitter.com/viniciusgajo">
+              <FaTwitter size="1.8rem" className={styles.item} />
+            </a>
+            <a href="https://github.com/64J0">
+              <FaGithub size="1.8rem" className={styles.item} />
+            </a>
+            <a href="https://www.linkedin.com/in/vinicius-gajo/">
+              <FaLinkedin size="1.8rem" className={styles.item} />
+            </a>
           </span>
         </footer>
       </div>

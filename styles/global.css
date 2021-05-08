@@ -14,6 +14,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--green);
 }
 
 a:hover {
@@ -79,6 +80,7 @@ code {
 p {
   tab-size: 2rem;
   -moz-tab-size: 2rem; /* Firefox */
+  color: var(--white); /* .drac-text-white */
 }
 
 @media (max-width: 375px) {

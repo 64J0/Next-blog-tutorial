@@ -17,8 +17,8 @@ const Header: React.FC = () => {
           alt="Vinícius Gajo"
         />
       </Link>
-      <h1 className={`${utilStyles.heading2X} drac-text-purple-cyan`}>
-        Vinícius Gajo
+      <h1>
+        Vinícius Gajo's Blog
       </h1>
     </div >
   );

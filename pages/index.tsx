@@ -35,18 +35,18 @@ const Home: React.FC<{ allPostsData: AllPostsData[]; }> = ({ allPostsData }) => 
 
       <div className={utilStyles.mainContent}>
         <section className={utilStyles.headingMd}>
-          <p className={`${utilStyles.adjustText} drac-text-white`}>
-            Formado em engenharia mecatrônica no CEFET-MG, desenvolvedor WEB focado na stack JS (React, Vue, Next.js e Node.js, principalmente) atualmente trabalhando na <a href="https://jmvtechnology.com/">JMV Technology</a>.
+          <p className={utilStyles.adjustText}>
+            Formado em engenharia mecatrônica no CEFET-MG, desenvolvedor WEB focado na stack JS/TS (React, Vue, Next.js e Node.js, principalmente) atualmente trabalhando na <a href="https://jmvtechnology.com/">JMV Technology</a> no ramo de streaming de áudio/vídeo utilizando tecnologias como FFMPEG e Wowza.
           </p>
         </section>
-        <section className={utilStyles.headingMd}>
-          <h2 className={`${utilStyles.headingLg} drac-text-yellow`}>
-            Posts
+        <section className={utilStyles.posts}>
+          <h2 className={utilStyles.posts__header}>
+            Postagens
           </h2>
-          <ul className={`${utilStyles.list} drac-text-white`}>
+          <ul className={utilStyles.posts__body}>
             {
               allPostsData.map(({ id, date, title }: AllPostsData) => (
-                <li className={utilStyles.listItem} key={id}>
+                <li className={utilStyles.item} key={id}>
                   <Link href="/posts/[id]" as={`/posts/${id}`}>
                     <a className="drac-text-purple-cyan">
                       {title}

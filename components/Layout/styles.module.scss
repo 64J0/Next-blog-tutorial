@@ -47,6 +47,23 @@ $max-width: 72rem;
   justify-content: space-between;
   margin: 5rem auto 3rem;
   max-width: $max-width;
+  color: var(--white);
+  
+  .icon-container {
+    max-width: 130px;
+    
+    .item {
+      margin: 0 8px;
+      cursor: pointer;
+      transition: 0.4s;
+      color: var(--white);
+
+      &:hover {
+        opacity: 0.7;
+        transform: translateY(-4px);
+      }
+    }
+  }
 }
 
 @media (max-width: 34rem) {
@@ -61,4 +78,3 @@ $max-width: 72rem;
     font-size: 20px;
   }
 }
-
