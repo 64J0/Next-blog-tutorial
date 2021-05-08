@@ -33,27 +33,29 @@ const Home: React.FC<{ allPostsData: AllPostsData[]; }> = ({ allPostsData }) => 
         <title>{siteTitle}</title>
       </Head>
 
-      <div className={utilStyles.mainContent}>
-        <section className={utilStyles.headingMd}>
-          <p className={utilStyles.adjustText}>
+      <div className={utilStyles['container']}>
+
+        <section className={utilStyles['resume']}>
+          <p className={utilStyles['resume__text']}>
             Formado em engenharia mecatrônica no CEFET-MG, desenvolvedor WEB focado na stack JS/TS (React, Vue, Next.js e Node.js, principalmente) atualmente trabalhando na <a href="https://jmvtechnology.com/">JMV Technology</a> no ramo de streaming de áudio/vídeo utilizando tecnologias como FFMPEG e Wowza.
           </p>
         </section>
-        <section className={utilStyles.posts}>
-          <h2 className={utilStyles.posts__header}>
+
+        <section className={utilStyles['posts-list']}>
+          <h2 className={utilStyles['posts-list__header']}>
             Postagens
           </h2>
-          <ul className={utilStyles.posts__body}>
+          <ul className={utilStyles['posts-list__body']}>
             {
               allPostsData.map(({ id, date, title }: AllPostsData) => (
-                <li className={utilStyles.item} key={id}>
+                <li className={utilStyles['item']} key={id}>
                   <Link href="/posts/[id]" as={`/posts/${id}`}>
                     <a className="drac-text-purple-cyan">
                       {title}
                     </a>
                   </Link>
                   <br />
-                  <small className={utilStyles.lightText}>
+                  <small className={utilStyles['post-date']}>
                     <Date dateString={date} />
                   </small>
                 </li>

@@ -59,6 +59,10 @@ u {
   text-decoration-style: wavy;
 }
 
+ul {
+  list-style: none;
+}
+
 pre {
   background-color: rgb(246, 248, 250);
   border-radius: 6px;

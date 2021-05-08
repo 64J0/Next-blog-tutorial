@@ -9,8 +9,7 @@ import Date from "../../components/Date";
 
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
-import utilStyles from "../../styles/utils.module.css";
-import postStyles from "./styles.module.scss";
+import styles from "./styles.module.scss";
 
 interface PostData {
   title: string;
@@ -43,11 +42,11 @@ const Post: React.FC<{ postData: PostData }> = ({ postData }) => {
         <title>{postData.title}</title>
       </Head>
 
-      <article className={postStyles.container}>
-        <h1 className={utilStyles.headingX1}>
+      <article className={styles['post']}>
+        <h1 className={styles['post__title']}>
           {postData.title}
         </h1>
-        <div className={`${utilStyles.textRight} + ${utilStyles.lightText}`}>
+        <div className={styles['post__meta']}>
           <Date dateString={postData.date} /><br/>
           {postData.tags && <small>Tags: [{postData.tags.join(", ")}]</small>}
         </div>
