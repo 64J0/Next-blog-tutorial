@@ -1,4 +1,6 @@
-.container {
+$prefix: header-post;
+
+.#{$prefix} {
   display: flex;
   flex-direction: row-reverse;
   align-items: baseline;
@@ -21,29 +23,30 @@
   }
 }
 
-.contactLink {
+.#{$prefix}__image {
+  width: 7rem;
+  height: 7rem;
+  margin: 0 auto;
+
+  border-radius: 9999px;
   transition: transform 4s;
+
+  &:hover {
+    transition: transform 4s;
+    transform: rotateZ(360deg);
+  }
 }
 
-.contactLink:hover {
-  transition: transform 4s;
-  transform: rotateZ(360deg);
-}
-
-.backToHome {
+.#{$prefix}__back-home {
   margin: 0;
   height: 100%;
 
-  a {
-    color: inherit;
-  }
-
-  .moveToLeft {
+  .#{$prefix}__move-left {
     transition: transform 1s;
   }
 
   &:hover {
-    .moveToLeft {
+    .#{$prefix}__move-left {
       transform: translate(-1.2rem, 0);
     }
   }
