@@ -8,7 +8,7 @@ import GithubContribGraph from "../../components/GithubContribGraph";
 import Age from "../../utils/Age";
 import { getGithubData } from "../../lib/github";
 
-import contatoStyles from "./styles.module.scss";
+import styles from "./styles.module.scss";
 
 interface ContribChartHTML {
   contribChartHTML: string;
@@ -34,17 +34,25 @@ const Contato: React.FC<ContribChartHTML> = ({ contribChartHTML }) => {
         <title>Contato</title>
       </Head>
 
-      <div className={contatoStyles.container}>
+      <div className={styles.contact}>
 
-        <section>
-          <h1>Sobre mim:</h1>
-          <p ref={pEl}>Saudações leitor, meu nome é Vinícius Gajo Marques Oliveira e tenho X anos.</p>
-          <p>Estou terminando o curso de Engenharia Mecatrônica no <a href="http://www.divinopolis.cefetmg.br/">CEFET-MG</a> e trabalhando como dev front-end na <a href="https://jmvtechnology.com/">JMV Technology</a>.</p>
-          <p>Antes disso já fui analista de redes de teleprocessamento no NOC (<i>Network Operations Center</i>) da <a href="https://www.soumaster.com.br/">Master Internet</a> e estagiário de engenharia na <a href="http://fullengenharia.com.br/">Full Engenharia</a>.</p>
+        <section className={styles['contact__about']}>
+          <h1>
+            Sobre mim:
+          </h1>
+          <p ref={pEl}>
+            Saudações leitor, meu nome é Vinícius Gajo Marques Oliveira e tenho X anos.
+          </p>
+          <p>
+            Finalizei minha graduação no curso de Engenharia Mecatrônica no <a href="http://www.divinopolis.cefetmg.br/">CEFET-MG</a> e atualmente estou trabalhando como dev full-stack na <a href="https://jmvtechnology.com/">JMV Technology</a>. Gosto bastante de ler e aprender novas coisas, por isso decidi entrar no ramo da tecnologia.
+          </p>
+          <p>
+            Antes disso já fui analista de redes de teleprocessamento no NOC (<i>Network Operations Center</i>) da <a href="https://www.soumaster.com.br/">Master Internet</a> e estagiário de engenharia na <a href="http://fullengenharia.com.br/">Full Engenharia</a>.
+          </p>
         </section>
 
-        <section className={contatoStyles.networks}>
-          <h1>Entre em contato:</h1>
+        <section className={styles['contact__networks']}>
+          <h2>Entre em contato:</h2>
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/vinicius-gajo/">
@@ -77,7 +85,7 @@ export default Contato;
 
 export async function getStaticProps() {
   const contribChartHTML = await getGithubData();
-  
+
   return {
     props: {
       contribChartHTML
