@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 html,
 body {
-  font-family: monospace;
   line-height: 1.6;
   font-size: 14px;
   background-color: var(--black);
@@ -30,6 +30,16 @@ main {
   margin-top: 0;
   padding-top: 1rem;
 }
+
+p {
+  tab-size: 2rem;
+  -moz-tab-size: 2rem; /* Firefox */
+  color: var(--white); /* .drac-text-white */
+}
+
+/* ===================
+  TABLE
+=================== */
 
 table,
 th,
@@ -59,9 +69,17 @@ u {
   text-decoration-style: wavy;
 }
 
+/* ===================
+  LIST
+=================== */
+
 ul {
   list-style: none;
 }
+
+/* ===================
+  CODE
+=================== */
 
 pre {
   background-color: rgb(246, 248, 250);
@@ -79,18 +97,4 @@ code {
   white-space: pre;
   word-break: normal;
   word-wrap: normal;
-}
-
-p {
-  tab-size: 2rem;
-  -moz-tab-size: 2rem; /* Firefox */
-  color: var(--white); /* .drac-text-white */
-}
-
-@media (max-width: 375px) {
-  p,
-  div,
-  li {
-    font-size: 1.3rem;
-  }
 }
