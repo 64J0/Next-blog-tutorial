@@ -47,8 +47,16 @@ const Post: React.FC<{ postData: PostData }> = ({ postData }) => {
           {postData.title}
         </h1>
         <div className={styles['post__meta']}>
-          <Date dateString={postData.date} /><br/>
-          {postData.tags && <small>Tags: [{postData.tags.join(", ")}]</small>}
+          <Date dateString={postData.date} />
+          <ul className={styles['post__meta-list']}>
+            {postData.tags?.map((tag: string) => {
+              return (
+                <li className={styles['post__meta-list-item']}>
+                  {tag}
+                </li>
+              );
+            })}
+          </ul>
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
