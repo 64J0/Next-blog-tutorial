@@ -3,7 +3,6 @@
   --blackSecondary: #414558;
   --blackTernary: #a7abbe;
   --blackLight: hsla(230, 15%, 15%, 5%);
-  --white: #f8f8f2;
   --whiteSecondary: #fff;
   --whiteLight: hsla(60, 30%, 96%, 5%);
   --cyan: #80ffea;
@@ -105,4 +104,8 @@
   --yellow-pink: linear-gradient(var(--gradientDegree), var(--yellow), var(--pink));
   --cyan-green: linear-gradient(var(--gradientDegree), var(--cyan), var(--green));
   --pink-purple: linear-gradient(var(--gradientDegree), var(--pink), var(--purple));
+
+  --white: #ffffff;
+  --text-black: rgb(52, 47, 62);
+  --text-heading: rgb(29, 25, 41);
 }

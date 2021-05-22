@@ -6,7 +6,7 @@ import Layout, { siteTitle } from "../components/Layout";
 import { getSortedPostData } from "../lib/posts";
 import Date from "../components/Date";
 
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "../styles/utils.module.scss";
 
 interface AllPostsData {
   id: string;

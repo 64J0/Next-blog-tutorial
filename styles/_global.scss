@@ -9,16 +9,16 @@ html,
 body {
   line-height: 1.6;
   font-size: 14px;
-  background-color: var(--black);
+  background-color: var(--white);
 }
 
 a {
-  text-decoration: none;
-  color: var(--green);
-}
-
-a:hover {
   text-decoration: underline;
+  color: var(--text-black);
+
+  &:hover {
+    opacity: 70%;
+  }
 }
 
 img {
@@ -34,7 +34,11 @@ main {
 p {
   tab-size: 2rem;
   -moz-tab-size: 2rem; /* Firefox */
-  color: var(--white); /* .drac-text-white */
+  color: var(--text-black);
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-heading);
 }
 
 /* ===================
